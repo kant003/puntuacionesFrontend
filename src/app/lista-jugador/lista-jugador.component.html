@@ -1,0 +1,22 @@
+<h1>Listado de jugadores</h1>
+<div *ngFor="let j of listaJugadores">
+  <h2>{{j.nombre}}</h2>  &nbsp;&nbsp; {{j.nombre}}
+
+
+
+
+  <a [routerLink]="" (click)="borrarJugador(j._id)" class="btn btn-link">Borrar</a>
+
+  &nbsp;&nbsp;
+
+  <a [routerLink]="[ '/editarJugador', j._id]" class="btn btn-link">Editar2</a>
+
+  <h4>Lista puntuaciones del usuario:</h4>
+
+
+  <app-lista-puntuaciones [idJugador]="j._id"></app-lista-puntuaciones>
+
+  <hr/>
+
+</div>
+

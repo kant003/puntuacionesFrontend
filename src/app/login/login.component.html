@@ -1,0 +1,27 @@
+
+
+<div class="contenedor">
+
+
+<form [formGroup]="form" (submit)="onSubmit(form.value)">
+  <label for="email">Email</label>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput type="email" name="email" formControlName="email">
+
+  </mat-form-field>
+
+  <br/>
+
+  <label for="password">Password</label>
+  <input type="password" name="password" formControlName="password">
+
+  <br/>
+
+
+  <input type="submit" value="enviar" [disabled]="form.invalid">
+</form>
+
+</div>

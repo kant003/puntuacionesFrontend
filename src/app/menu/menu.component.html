@@ -1,0 +1,16 @@
+<div>{{emailRegistrado()}}</div>
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+    <span>Puntuaciones de jugadores</span>
+    <span class="example-spacer"></span>
+    &nbsp;
+    <a [routerLink]="['/listaJugadores']"> Lista de jugadores </a>
+    &nbsp;
+    <a [routerLink]="['/addJugador']"> Registrar nuevo jugador </a>
+    &nbsp;
+    <a [routerLink]="['/login']"> Login</a>
+    &nbsp;
+    <a href="#" (click)="logout()"> Logout</a>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,15 @@
+<ul *ngFor="let p of puntuaciones">
+  <li> {{p.puntuacion}} <span (click)="borrarPuntuacion(p._id)">X</span></li>
+</ul>
+
+<mat-spinner *ngIf="cargando" ></mat-spinner>
+
+
+<form [formGroup]="form" (submit)="onSubmit(form.value)">
+
+  <label for="puntuacion">Puntuacion</label>
+  <input type="number" name="puntuacion" formControlName="puntuacion">
+
+  <input type="submit" value="enviar" [disabled]="form.invalid">
+</form>
+
